@@ -74,10 +74,27 @@ const ServiceQuoteForm: React.FC<ServiceQuoteFormProps> = ({
     setProgress(newStep * 25);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit(formData);
-  };
+const [isSubmitted, setIsSubmitted] = useState(false);
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  onSubmit(formData);
+  setIsSubmitted(true); // Show the success message
+};
+
+if (isSubmitted) {
+  return (
+    <Card className="w-full max-w-lg mx-auto bg-background">
+      <CardContent className="p-8 text-center">
+        <Check className="mx-auto mb-4 h-8 w-8 text-green-600" />
+        <CardTitle>Thank you!</CardTitle>
+        <CardDescription>
+          Your request has been submitted successfully. We’ll get back to you soon.
+        </CardDescription>
+      </CardContent>
+    </Card>
+  );
+}
 
   const renderStep = () => {
     switch (step) {
@@ -115,14 +132,6 @@ const ServiceQuoteForm: React.FC<ServiceQuoteFormProps> = ({
                   <SelectContent>
                     <SelectItem value="First-time">
                       First-time e-Khata
-                    </SelectItem>
-                    <SelectItem value="Sale">Transfer due to Sale</SelectItem>
-                    <SelectItem value="Gift">Transfer due to Gift</SelectItem>
-                    <SelectItem value="Inheritance">
-                      Transfer due to Inheritance
-                    </SelectItem>
-                    <SelectItem value="Court">
-                      Transfer due to Court Decree
                     </SelectItem>
                   </SelectContent>
                 </Select>
@@ -298,6 +307,8 @@ const ServiceQuoteForm: React.FC<ServiceQuoteFormProps> = ({
         return null;
     }
   };
+
+
 
   return (
     <Card className="w-full max-w-lg mx-auto bg-background">

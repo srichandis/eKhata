@@ -53,12 +53,12 @@ export default function Home() {
             >
               Pricing
             </Link>
-            <Link
-              to="/about"
+            <a
+              href="#about"
               className="text-sm font-medium hover:text-blue-600 transition-colors"
             >
               About Us
-            </Link>
+            </a>
             <Link
               to="/contact"
               className="text-sm font-medium hover:text-blue-600 transition-colors"
@@ -89,13 +89,15 @@ export default function Home() {
               hand‑offs to get your e‑Khata/Khata Transfer done—end‑to‑end,
               transparently.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 shadow-lg hover:shadow-xl transition-all">
-                Get a Quote <ArrowRight className="ml-2 h-4 w-4" />
+                Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
+              <a href="https://wa.me/+919611633346" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="hover:bg-green-50 hover:border-green-300 transition-all">
                 <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
               </Button>
+              </a>
             </div>
           </div>
           <div className="relative">
@@ -168,86 +170,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="container py-20">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">What We Do</h2>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 hover:shadow-lg transition-all hover:-translate-y-1">
-            <CardHeader>
-              <div className="bg-blue-600 p-3 rounded-lg w-fit mb-2">
-                <FileText className="h-10 w-10 text-white" />
-              </div>
-              <CardTitle className="text-blue-800">e‑Khata Creation & Transfer</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-blue-700">
-                First‑time e‑Khata after purchase; transfer due to
-                Sale/Gift/Inheritance/Court Decree.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200 hover:shadow-lg transition-all hover:-translate-y-1">
-            <CardHeader>
-              <div className="bg-green-600 p-3 rounded-lg w-fit mb-2">
-                <FileText className="h-10 w-10 text-white" />
-              </div>
-              <CardTitle className="text-green-800">POA & Representative Flows</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-green-700">
-                Country‑specific checklists, apostille/consular guidance, India
-                registration coordination.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 hover:shadow-lg transition-all hover:-translate-y-1">
-            <CardHeader>
-              <div className="bg-purple-600 p-3 rounded-lg w-fit mb-2">
-                <Clock className="h-10 w-10 text-white" />
-              </div>
-              <CardTitle className="text-purple-800">Annual Property Compliance</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-purple-700">
-                BBMP tax filing, EC fetch, society/RWA updates, consolidated
-                statements.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 hover:shadow-lg transition-all hover:-translate-y-1">
-            <CardHeader>
-              <div className="bg-orange-600 p-3 rounded-lg w-fit mb-2">
-                <Shield className="h-10 w-10 text-white" />
-              </div>
-              <CardTitle className="text-orange-800">Document Vault</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-orange-700">
-                Secure storage; receipts and milestones auto‑saved for future
-                reference.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="mt-10 bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-xl border border-amber-200">
-          <div className="flex items-start gap-3">
-            <div className="bg-amber-100 p-2 rounded-full">
-              <AlertCircle className="h-5 w-5 text-amber-600" />
-            </div>
-            <p className="text-sm text-amber-800">
-              <strong>Note:</strong> We are not a law firm. Legal
-              drafting/advice (e.g., Will, POA) is provided by independent
-              empanelled advocates engaged by you via clean, transparent
-              hand‑offs.
+      {/* About Section */}
+       <section id="about" className="bg-gradient-to-r from-blue-50 to-green-50 py-16">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">About Us</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Thirumalesh (“Thiru”) Gangappa, Founder of LegalConnect AI, 
+              is a corporate lawyer with 30 years’ experience—including 
+              2 decades in Google legal team. A board member of several 
+              tech companies, he focuses on GCC setups, governance, 
+              contracts, and real estate legal compliance—delivering 
+              AI-powered, on-ground solutions as your Legal Copilot.
             </p>
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
       {/* How It Works Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20">
@@ -327,91 +265,6 @@ export default function Home() {
             <p className="text-muted-foreground">
               Personalized assistance throughout the process with regular
               updates.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="bg-muted/50 py-20">
-        <div className="container">
-          <h2 className="text-3xl font-bold mb-4 text-center">Pricing</h2>
-          <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
-            Transparent pricing with no hidden fees. Government charges are
-            passed through at actuals with receipts.
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>e‑Khata / Khata Transfer</CardTitle>
-                <CardDescription>Basic service package</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold mb-2">₹10,000–₹25,000</div>
-                <p className="text-sm text-muted-foreground">
-                  Service fee per property (+ government charges at actuals)
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full">Get Quote</Button>
-              </CardFooter>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>POA Package</CardTitle>
-                <CardDescription>For owners abroad</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold mb-2">₹15,000–₹35,000</div>
-                <p className="text-sm text-muted-foreground">
-                  (+ consular/government charges)
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full">Get Quote</Button>
-              </CardFooter>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Will & Registration</CardTitle>
-                <CardDescription>Facilitated service</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold mb-2">₹15,000–₹40,000</div>
-                <p className="text-sm text-muted-foreground">
-                  (+ registration fees if chosen)
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full">Get Quote</Button>
-              </CardFooter>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Membership</CardTitle>
-                <CardDescription>Optional</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold mb-2">₹2,000–₹5,000</div>
-                <p className="text-sm text-muted-foreground">
-                  Per month for compliance reminders, vault, priority support
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full">Get Quote</Button>
-              </CardFooter>
-            </Card>
-          </div>
-
-          <div className="mt-10 bg-background p-6 rounded-lg border">
-            <p className="text-sm text-muted-foreground">
-              <strong>Note:</strong> In transfer cases, BBMP often levies a
-              government fee (e.g., a percentage of the stamp duty paid at
-              registration). We'll show and store every official receipt.
             </p>
           </div>
         </div>
@@ -575,64 +428,17 @@ export default function Home() {
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button size="lg">
-                Get a Quote <ArrowRight className="ml-2 h-4 w-4" />
+                Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg">
-                <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
-              </Button>
+              <a href="https://wa.me/+919611633346" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg">
+                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
+                </Button>
+              </a>
             </div>
           </div>
           <div className="bg-background rounded-lg border p-6">
             <ServiceQuoteForm />
-          </div>
-        </div>
-      </section>
-
-      {/* Trust & Compliance Section */}
-      <section className="bg-muted/50 py-12">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold mb-6 text-center">
-              Compliance & Trust
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-background p-4 rounded-lg border">
-                <div className="flex items-start gap-3">
-                  <AlertCircle className="h-5 w-5 text-amber-500 mt-0.5" />
-                  <p className="text-sm">
-                    <strong>Not a law firm.</strong> Legal advice via
-                    independent advocates engaged by you.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-background p-4 rounded-lg border">
-                <div className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-primary mt-0.5" />
-                  <p className="text-sm">
-                    <strong>Privacy:</strong> DPDP‑aligned; consent,
-                    minimisation, retention, breach response.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-background p-4 rounded-lg border">
-                <div className="flex items-start gap-3">
-                  <FileText className="h-5 w-5 text-primary mt-0.5" />
-                  <p className="text-sm">
-                    <strong>Receipts:</strong> Every government fee receipt is
-                    shared and stored in your vault.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-background p-4 rounded-lg border">
-                <div className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-primary mt-0.5" />
-                  <p className="text-sm">
-                    <strong>Refund/redo policy:</strong> Clear
-                    inclusions/exclusions and SLA‑based remedies.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
