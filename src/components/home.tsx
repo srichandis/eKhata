@@ -35,7 +35,12 @@ export default function Home() {
             <div className="bg-gradient-to-r from-blue-600 to-green-600 p-2 rounded-lg">
               <Shield className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">LegalConnect AI</span>
+            <div className="flex flex-col items-start leading-tight">
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">LegalConnect AI</span>
+                <span className="text-xs text-gray-500 mt-0.5 tracking-wide">
+                  Legal co-pilot for NRIs
+                </span>
+            </div>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
