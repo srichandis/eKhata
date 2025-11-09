@@ -71,12 +71,14 @@ export default function Home() {
               Contact
             </Link>
           </nav>
+          <a href="https://wa.me/+919611633346" target="_blank" rel="noopener noreferrer">
           <div className="flex items-center gap-4">
             <Button variant="outline" size="sm" className="hidden md:flex hover:bg-green-50 hover:border-green-300">
               <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
             </Button>
             <Button size="sm" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">Sign In</Button>
           </div>
+          </a>
         </div>
       </header>
 
