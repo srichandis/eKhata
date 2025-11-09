@@ -97,9 +97,11 @@ export default function Home() {
               transparently.
             </p>
             <div className="">
+              <a href="#ready" rel="noopener noreferrer">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 shadow-lg hover:shadow-xl transition-all">
                 Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
+              </a>
               <a href="https://wa.me/+919611633346" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="hover:bg-green-50 hover:border-green-300 transition-all">
                 <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
@@ -411,7 +413,7 @@ export default function Home() {
       </section>
 
       {/* Get Started Section */}
-      <section className="container py-20">
+      <section id="ready" className="container py-20">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">Ready to Start?</h2>
