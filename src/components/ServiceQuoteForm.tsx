@@ -79,7 +79,7 @@ const [isSubmitted, setIsSubmitted] = useState(false);
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
-  const sheetURL = "https://script.google.com/macros/s/AKfycbx7okv1Odc78OxVG9fQViiAkXhEUhHknZm4ORmpW56lExf7cYdaRE0KyupQZFTm45tV/exec";
+  const sheetURL = "https://script.google.com/macros/s/AKfycbyBbV_Pn_6YSIe8gi-s8xmkBAHyjrRA_MXWx2igEaygKKBIc0vNmyzRA1OjOogTLPeSbQ/exec";
 
   try {
     await fetch(sheetURL, {
