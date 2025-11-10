@@ -76,11 +76,27 @@ const ServiceQuoteForm: React.FC<ServiceQuoteFormProps> = ({
 
 const [isSubmitted, setIsSubmitted] = useState(false);
 
-const handleSubmit = (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
-  onSubmit(formData);
-  setIsSubmitted(true); // Show the success message
+
+  const sheetURL = "https://script.google.com/macros/s/AKfycbx7okv1Odc78OxVG9fQViiAkXhEUhHknZm4ORmpW56lExf7cYdaRE0KyupQZFTm45tV/exec";
+
+  try {
+    await fetch(sheetURL, {
+      method: "POST",
+      mode: "no-cors", // since Google doesn’t send CORS headers
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    onSubmit(formData);
+    setIsSubmitted(true);
+  } catch (error) {
+    console.error("Error submitting to Google Sheets:", error);
+  }
 };
+
+
 
 if (isSubmitted) {
   return (
