@@ -42,7 +42,7 @@ export default function Home() {
                 </span>
             </div>
           </div>
-          <nav className="hidden md:flex items-center gap-6">
+          {/*<nav className="hidden md:flex items-center gap-6">
             <Link to="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
               Home
             </Link>
@@ -70,12 +70,21 @@ export default function Home() {
             >
               Contact
             </Link>
-          </nav>
+          </nav>*/}
           <div className="flex items-center gap-4">
             <a href="https://wa.me/+919611633346" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="sm" className="hidden md:flex hover:bg-green-50 hover:border-green-300">
-              <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
-            </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="hover:bg-green-50 hover:border-green-300 transition-all"
+                >
+                  <img
+                    src="/whatsapp.svg"
+                    alt="WhatsApp"
+                    className="mr-2 h-5 w-5"
+                  />
+                  WhatsApp Us
+                </Button>
             </a>
             <Button size="sm" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">Sign In</Button>
           </div>
@@ -96,16 +105,34 @@ export default function Home() {
               hand‑offs to get your e‑Khata/Khata Transfer done—end‑to‑end,
               transparently.
             </p>
-            <div className="">
-              <a href="#ready" rel="noopener noreferrer">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 shadow-lg hover:shadow-xl transition-all">
-                Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+            <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50 w-[220px]">
+              <a href="#ready" rel="noopener noreferrer" className="w-full">
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 shadow-lg hover:shadow-xl transition-all"
+                >
+                  Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </a>
-              <a href="https://wa.me/+919611633346" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="hover:bg-green-50 hover:border-green-300 transition-all">
-                <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
-              </Button>
+
+              <a
+                href="https://wa.me/+919611633346"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full hover:bg-green-50 hover:border-green-300 transition-all"
+                >
+                  <img
+                    src="/whatsapp.svg"
+                    alt="WhatsApp"
+                    className="mr-2 h-5 w-5"
+                  />
+                  WhatsApp Us
+                </Button>
               </a>
             </div>
           </div>
@@ -440,8 +467,17 @@ export default function Home() {
                 Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <a href="https://wa.me/+919611633346" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg">
-                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp Us
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="hover:bg-green-50 hover:border-green-300 transition-all"
+                >
+                  <img
+                    src="/whatsapp.svg"
+                    alt="WhatsApp"
+                    className="mr-2 h-5 w-5"
+                  />
+                  WhatsApp Us
                 </Button>
               </a>
             </div>
