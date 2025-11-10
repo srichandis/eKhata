@@ -32,14 +32,19 @@ export default function Home() {
       <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
+            {/* Logo icon — always visible */}
             <div className="bg-gradient-to-r from-blue-600 to-green-600 p-2 rounded-lg">
               <Shield className="h-6 w-6 text-white" />
             </div>
-            <div className="flex flex-col items-start leading-tight">
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">LegalConnect AI</span>
-                <span className="text-xs text-gray-500 mt-0.5 tracking-wide">
-                  Legal co-pilot for NRIs
-                </span>
+
+            {/* Logo text — hidden on small screens, visible from md and up */}
+            <div className="hidden md:flex flex-col items-start leading-tight">
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                LegalConnect AI
+              </span>
+              <span className="text-xs text-gray-500 mt-0.5 tracking-wide">
+                Legal co-pilot for NRIs
+              </span>
             </div>
           </div>
           {/*<nav className="hidden md:flex items-center gap-6">
