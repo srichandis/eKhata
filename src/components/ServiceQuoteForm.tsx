@@ -62,17 +62,36 @@ const ServiceQuoteForm: React.FC<ServiceQuoteFormProps> = ({
     }));
   };
 
-  const nextStep = () => {
-    const newStep = step + 1;
-    setStep(newStep);
-    setProgress(newStep * 25);
-  };
+const nextStep = () => {
+  if (step === 2) {
+    const error = validateEmail(formData.email);
+    if (error) {
+      setEmailError(error);
+      return; // Stop if email invalid
+    }
+  }
+
+  const newStep = step + 1;
+  setStep(newStep);
+  setProgress(newStep * 25);
+};
+
 
   const prevStep = () => {
     const newStep = step - 1;
     setStep(newStep);
     setProgress(newStep * 25);
   };
+
+const [emailError, setEmailError] = useState("");
+
+const validateEmail = (email: string) => {
+  if (!email.trim()) return "Email address is required";
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) return "Please enter a valid email address";
+  return "";
+};
+
 
 const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -190,8 +209,17 @@ if (isSubmitted) {
                   type="email"
                   placeholder="Enter your email address"
                   value={formData.email}
-                  onChange={(e) => handleChange("email", e.target.value)}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    handleChange("email", value);
+                    setEmailError(validateEmail(value));
+                  }}
+                  onBlur={() => setEmailError(validateEmail(formData.email))}
+                  className={emailError ? "border-red-500 focus-visible:ring-red-500" : ""}
                 />
+                {emailError && (
+                  <p className="text-xs text-red-500">{emailError}</p>
+                )}
               </div>
               <div className="space-y-2">
                 <Label htmlFor="phone">WhatsApp Number</Label>
